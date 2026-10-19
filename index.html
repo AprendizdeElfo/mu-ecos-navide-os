@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiz de Elfo - Muñecos Navideños Personalizados</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        elfGreen: '#285943',
+                        elfCream: '#F7F0E3',
+                        elfRed: '#B94E48',
+                        elfGold: '#D6A84F',
+                        elfGoldHover: '#c4953c',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .cta-btn-pulse {
+            animation: pulse-gold 2s infinite;
+        }
+        @keyframes pulse-gold {
+            0% {
+                box-shadow: 0 0 0 0 rgba(214, 168, 79, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(214, 168, 79, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(214, 168, 79, 0);
+            }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-elfCream text-gray-800">
+
+    <!-- SECCIÓN 1: LOGO -->
+    <header class="bg-elfGreen py-6 px-4 text-center border-b border-white/10">
+        <div class="max-w-4xl mx-auto flex justify-center items-center">
+            <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/logo_el_aprendiz_de_elfo_fondo_blanco.png" 
+                 alt="Aprendiz de Elfo Logo" 
+                 class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-elfGold shadow-xl transform hover:scale-105 transition duration-300"
+                 onerror="this.onerror=null; this.src='https://placehold.co/150x150/285943/FFFFFF?text=Aprendiz+de+Elfo';">
+        </div>
+    </header>
+
+    <!-- SECCIÓN 2: TITULAR DE TRANSFORMACIÓN -->
+    <section class="bg-elfGreen py-10 px-6 text-center text-white border-b border-elfGold/20">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block bg-elfGold/20 text-elfGold border border-elfGold/40 text-xs md:text-sm uppercase tracking-wider font-semibold py-1 px-3 rounded-full mb-4">
+                ✨ Edición Especial Navidad 2026
+            </span>
+            <h1 class="font-serif text-2xl md:text-4xl font-bold leading-tight text-elfCream shadow-sm">
+                Pasa de una decoración navideña aburrida y repetitiva a crear un hogar cálido, único e inolvidable esta Navidad en menos de 7 días, con muñecos hechos a mano y 100% personalizados.
+            </h1>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: PROBLEMA Y DESEO (2 COLUMNAS) -->
+    <section class="bg-elfCream py-12 md:py-16 px-6">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <!-- Columna Izquierda: Imagen -->
+            <div class="flex justify-center order-2 md:order-1">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-elfGold to-elfRed rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+                    <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/Abrazo%20navide%C3%B1o%20con%20reno%20de%20peluche.png" 
+                         alt="Abrazo navideño con reno de peluche" 
+                         class="relative rounded-2xl shadow-2xl max-w-full h-auto object-cover border-2 border-white"
+                         onerror="this.onerror=null; this.src='https://placehold.co/500x500/F7F0E3/285943?text=Reno+Navide%C3%B1o';">
+                </div>
+            </div>
+            
+            <!-- Columna Derecha: Texto Copy -->
+            <div class="order-1 md:order-2 space-y-5">
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-elfGreen leading-snug">
+                    ¿Cansada de recorrer tiendas y ver exactamente los mismos adornos genéricos en todas las casas de tus vecinas?
+                </h2>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Sabes que tu hogar merece reflejar el amor, la calidez y la esencia única de tu familia en estas fiestas.
+                </p>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Con <strong class="text-elfGreen font-semibold">Aprendiz de Elfo</strong>, transformamos rincones ordinarios en espacios mágicos llenos de personalidad, donde cada muñeco lleva los colores, detalles y nombres que tú elijas.
+                </p>
+                <div class="p-4 bg-elfGreen/10 border-l-4 border-elfGreen rounded-r-lg">
+                    <p class="text-elfGreen font-bold text-base md:text-lg">
+                        ¡No dejes para último momento la magia de tu hogar!
+                    </p>
+                    <p class="text-gray-800 text-sm md:text-base mt-1">
+                        ¡Haz tu pedido personalizado hoy mismo y asegura tus piezas exclusivas antes de que cerremos agenda por temporada!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: MANEJO DE OBJECIONES (2 COLUMNAS) -->
+    <section class="bg-elfRed py-12 md:py-16 px-6 text-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Columna Izquierda: Objeciones -->
+            <div class="lg:col-span-7 space-y-8">
+                <!-- Objeción 1 -->
+                <div class="bg-black/10 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="font-serif text-xl md:text-2xl font-bold text-center text-elfGold mb-3">
+                        "No tengo tiempo para coordinar personalizaciones o ponerme a encargar cosas"
+                    </h3>
+                    <p class="text-sm md:text-base text-white/90 leading-relaxed text-left">
+                        Entiendo perfectamente cómo te sientes; con el trabajo, la casa y la rutina, lo último que quieres es perder tiempo en procesos complicados. Muchas de nuestras clientas sentían lo mismo antes de escribirnos. Sin embargo, descubrieron que con nuestro proceso ágil por WhatsApp solo necesitas 3 minutos para elegir tus colores, nombres y detalles preferidos. Nosotros nos encargamos del resto y lo entregamos en la puerta de tu casa en Mosquera sin complicaciones.
+                    </p>
+                </div>
+
+                <!-- Objeción 2 -->
+                <div class="bg-black/10 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="font-serif text-xl md:text-2xl font-bold text-center text-elfGold mb-3">
+                        "Puedo conseguir muñecos navideños más baratos en un supermercado"
+                    </h3>
+                    <p class="text-sm md:text-base text-white/90 leading-relaxed text-left">
+                        Entiendo que al principio pienses en el presupuesto y busques opciones más económicas. A muchas mamás les pasó igual, hasta que compraron adornos industriales que terminaron deshilachados o guardados al año siguiente por verse deslucidos. Cuando invierten en nuestras piezas artesanales, descubren que no están comprando un simple adorno sintético de masa, sino un recuerdo familiar duradero, hecho con materiales de alta calidad y detalles únicos que llenarán de orgullo tu sala año tras año.
+                    </p>
+                </div>
+
+                <!-- Objeción 3 -->
+                <div class="bg-black/10 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="font-serif text-xl md:text-2xl font-bold text-center text-elfGold mb-3">
+                        "Tengo miedo de que pida algo personalizado y al final no combine con mi decoración o no quede como imaginaba"
+                    </h3>
+                    <p class="text-sm md:text-base text-white/90 leading-relaxed text-left">
+                        Comprendo tu duda; da temor encargar algo personalizado y que el resultado final no encaje con la paleta de colores de tu hogar. Otras mamás tenían ese mismo recelo. Por eso creamos una asesoría de diseño personalizada previa: antes de dar la primera puntada, validamos contigo tonos, estilos y acabados para garantizar que el muñeco encaje a la perfección con la decoración que ya tienes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Imagen -->
+            <div class="lg:col-span-5 flex justify-center">
+                <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/Sonrisa%20navide%C3%B1a%20con%20mu%C3%B1eco%20de%20nieve.png" 
+                     alt="Sonrisa navideña con muñeco de nieve" 
+                     class="rounded-2xl shadow-2xl border-4 border-white/20 max-w-full h-auto object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/450x600/B94E48/FFFFFF?text=Mu%C3%B1eco+de+Nieve';">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: BOTÓN CTA #1 -->
+    <section class="bg-elfRed pb-12 pt-4 px-6 text-center">
+        <div class="max-w-xl mx-auto">
+            <a href="https://wa.link/v21uiu/" target="_blank" rel="noopener" 
+               class="cta-btn-pulse inline-flex items-center justify-center gap-3 bg-elfGold hover:bg-elfGoldHover text-elfGreen font-bold text-lg md:text-xl py-5 px-8 rounded-full shadow-2xl transition duration-300 transform hover:-translate-y-1 w-full sm:w-auto uppercase tracking-wide">
+               <i class="fa-brands fa-whatsapp text-2xl text-elfGreen"></i>
+               ¡QUIERO MI MUÑECO PERSONALIZADO AHORA!
+            </a>
+            <p class="text-white/80 text-xs mt-3">⚡ Respuesta rápida e inmediata por WhatsApp</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: KIT DE MAGIA NAVIDEÑA -->
+    <section class="bg-elfCream pt-12 pb-6 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-4xl font-extrabold text-elfGreen mb-6">
+                El Kit de Magia Navideña Familiar "Aprendiz de Elfo":
+            </h2>
+            <div class="flex justify-center my-6">
+                <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/Peluches%20navide%C3%B1os%20en%20un%20rinc%C3%B3n%20acogedor.png" 
+                     alt="Peluches navideños en un rincón acogedor" 
+                     class="rounded-2xl shadow-xl border-4 border-white max-w-full h-auto"
+                     onerror="this.onerror=null; this.src='https://placehold.co/700x450/F7F0E3/285943?text=Kit+de+Magia+Navide%C3%B1a';">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: STACK DE VALOR Y BONOS EXCLUSIVOS -->
+    <section class="bg-elfCream pb-12 px-6">
+        <div class="max-w-3xl mx-auto bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-elfGold/30 text-left">
+            <p class="text-base md:text-lg text-gray-800 mb-6 leading-relaxed font-medium">
+                Al solicitar tu muñeco navideño personalizado hoy, no solo te llevas una pieza artesanal de edición limitada confeccionada especialmente para ti. También recibes de forma <span class="text-elfRed font-bold">totalmente exclusiva:</span>
+            </p>
+
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3 bg-elfCream/60 p-4 rounded-xl border border-elfGold/20">
+                    <span class="text-elfGreen text-xl mt-1"><i class="fa-solid fa-circle-check"></i></span>
+                    <span class="text-sm md:text-base text-gray-800">
+                        <strong class="text-elfGreen">Personalización completa de colores y bordado de nombres</strong> para cada integrante de tu familia <span class="bg-elfRed/10 text-elfRed font-bold px-2 py-0.5 rounded text-xs md:text-sm whitespace-nowrap">(Valorado en $35.000 — ¡HOY GRATIS!)</span>.
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-3 bg-elfCream/60 p-4 rounded-xl border border-elfGold/20">
+                    <span class="text-elfGreen text-xl mt-1"><i class="fa-solid fa-circle-check"></i></span>
+                    <span class="text-sm md:text-base text-gray-800">
+                        <strong class="text-elfGreen">Guía exprés de armonía y ubicación decorativa</strong> para que tu sala luzca como de revista <span class="bg-elfRed/10 text-elfRed font-bold px-2 py-0.5 rounded text-xs md:text-sm whitespace-nowrap">(Valorado en $25.000 — ¡HOY GRATIS!)</span>.
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-3 bg-elfCream/60 p-4 rounded-xl border border-elfGold/20">
+                    <span class="text-elfGreen text-xl mt-1"><i class="fa-solid fa-circle-check"></i></span>
+                    <span class="text-sm md:text-base text-gray-800">
+                        <strong class="text-elfGreen">Empaque de regalo premium "Listo para Sorprender"</strong> con aroma navideño artesanal <span class="bg-elfRed/10 text-elfRed font-bold px-2 py-0.5 rounded text-xs md:text-sm whitespace-nowrap">(Valorado en $15.000 — ¡HOY GRATIS!)</span>.
+                    </span>
+                </li>
+            </ul>
+
+            <div class="bg-elfRed/10 border-l-4 border-elfRed p-4 rounded-r-xl">
+                <p class="text-elfRed font-bold text-xs md:text-sm uppercase tracking-wide flex items-center gap-2 mb-1">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Nota de Escasez:
+                </p>
+                <p class="text-gray-700 text-xs md:text-sm leading-relaxed">
+                    Debido al trabajo artesanal detallado que requiere cada pieza, <strong>solo elaboramos 20 pedidos personalizados por semana</strong>. Una vez completado el cupo, cerramos agenda.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8: BOTÓN CTA #2 -->
+    <section class="bg-elfRed py-10 px-6 text-center">
+        <div class="max-w-xl mx-auto">
+            <a href="https://wa.link/v21uiu/" target="_blank" rel="noopener" 
+               class="cta-btn-pulse inline-flex items-center justify-center gap-3 bg-elfGold hover:bg-elfGoldHover text-elfGreen font-bold text-lg md:text-xl py-5 px-8 rounded-full shadow-2xl transition duration-300 transform hover:-translate-y-1 w-full sm:w-auto uppercase tracking-wide">
+               <i class="fa-brands fa-whatsapp text-2xl text-elfGreen"></i>
+               ¡QUIERO MI MUÑECO PERSONALIZADO AHORA!
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 9: TÍTULO TESTIMONIOS -->
+    <section class="bg-elfGreen py-8 px-6 text-center text-white border-t border-elfGold/20">
+        <h2 class="font-serif text-3xl md:text-4xl font-extrabold text-elfCream tracking-wide">
+            Testimonios
+        </h2>
+    </section>
+
+    <!-- SECCIÓN 10: GALERÍA DE TESTIMONIOS (3 IMÁGENES) -->
+    <section class="bg-elfGreen pb-12 px-6">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/10 shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/zeoob.com_7lmwswfbks_photo.png" 
+                     alt="Testimonio de cliente 1" 
+                     class="rounded-xl w-full h-auto object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/400x400/285943/FFFFFF?text=Testimonio+1';">
+            </div>
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/10 shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/zeoob.com_llinhej3y8_photo.png" 
+                     alt="Testimonio de cliente 2" 
+                     class="rounded-xl w-full h-auto object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/400x400/285943/FFFFFF?text=Testimonio+2';">
+            </div>
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/10 shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/zeoob.com_z7x0unq3xi_photo.png" 
+                     alt="Testimonio de cliente 3" 
+                     class="rounded-xl w-full h-auto object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/400x400/285943/FFFFFF?text=Testimonio+3';">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 11: PREGUNTAS FRECUENTES (ACORDEÓN INTERACTIVO) -->
+    <section class="bg-elfCream py-12 md:py-16 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-bold text-center text-elfGreen mb-8">
+                Preguntas Frecuentes
+            </h2>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- Elemento 1 -->
+                <div class="accordion-item bg-white rounded-2xl border border-elfGold/30 shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full text-left p-5 font-bold text-elfGreen flex justify-between items-center text-base md:text-lg focus:outline-none">
+                        <span>¿Cómo sé que la calidad de los muñecos durará más de una Navidad?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon transition-transform duration-300 text-elfGold"></i>
+                    </button>
+                    <div class="accordion-content text-gray-700 px-5 text-sm md:text-base">
+                        <div class="pb-5 border-t border-gray-100 pt-3">
+                            En Aprendiz de Elfo utilizamos textiles de alta gama y bordados reforzados a mano. Más de 150 familias en Mosquera y la Sabana ya han decorado sus hogares con nuestras piezas durante más de 3 años consecutivos, manteniendo la misma suavidad, brillo y firmeza del primer día.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elemento 2 -->
+                <div class="accordion-item bg-white rounded-2xl border border-elfGold/30 shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full text-left p-5 font-bold text-elfGreen flex justify-between items-center text-base md:text-lg focus:outline-none">
+                        <span>¿Puedo personalizar el muñeco con los colores exactos de mi árbol o los nombres de mis hijos?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon transition-transform duration-300 text-elfGold"></i>
+                    </button>
+                    <div class="accordion-content text-gray-700 px-5 text-sm md:text-base">
+                        <div class="pb-5 border-t border-gray-100 pt-3">
+                            ¡Por supuesto! Es nuestra especialidad. Como artesanos y creadores, elegimos minuciosamente cada tela y color junto a ti. Nuestras clientas destacan constantemente en sus opiniones cómo el nivel de detalle y los nombres personalizados hacen que sus hijos se sientan verdaderamente protagonistas de la Navidad.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="accordion-item bg-white rounded-2xl border border-elfGold/30 shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full text-left p-5 font-bold text-elfGreen flex justify-between items-center text-base md:text-lg focus:outline-none">
+                        <span>¿Cuánto tarda en llegar mi pedido a Mosquera y zonas cercanas?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon transition-transform duration-300 text-elfGold"></i>
+                    </button>
+                    <div class="accordion-content text-gray-700 px-5 text-sm md:text-base">
+                        <div class="pb-5 border-t border-gray-100 pt-3">
+                            Una vez confirmes la personalización, nos toma entre 3 y 5 días hábiles confeccionar tu pieza con todo el amor y detalle. Contamos con envíos locales garantizados e inspeccionados previamente para asegurarnos de que tu producto llegue impecable y listo para lucir.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 12: GARANTÍA IRRESISTIBLE (2 COLUMNAS) -->
+    <section class="bg-elfRed py-12 md:py-16 px-6 text-white border-t border-white/10">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Columna Izquierda: Imagen -->
+            <div class="flex justify-center">
+                <img src="https://github.com/AprendizdeElfo/mu-ecos-navide-os/raw/main/Mu%C3%B1eco%20de%20nieve%20navide%C3%B1o%20con%20compa%C3%B1ero.png" 
+                     alt="Muñeco de nieve navideño con compañero" 
+                     class="rounded-2xl shadow-2xl border-4 border-white/20 max-w-full h-auto object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/450x450/B94E48/FFFFFF?text=Garantia+de+Calidad';">
+            </div>
+
+            <!-- Columna Derecha: Texto Garantía -->
+            <div class="space-y-4">
+                <div class="text-center md:text-left">
+                    <span class="inline-block bg-elfGold text-elfGreen text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+                        100% Libre de Riesgo
+                    </span>
+                    <h2 class="font-serif text-2xl md:text-3xl font-extrabold text-elfGold leading-snug">
+                        GARANTÍA TOTAL "HOGAR MÁGICO 100%"
+                    </h2>
+                </div>
+                <p class="text-sm md:text-base text-white/95 leading-relaxed text-left">
+                    Estamos tan seguros de la belleza, detalle y calidad de nuestras piezas que asumimos todo el riesgo por ti. Si al recibir tu muñeco personalizado en casa sientes que no supera tus expectativas o no combina exactamente como querías con tu hogar, nos lo devuelves sin hacer preguntas y te reembolsamos el 100% de tu dinero inmediatamente. Queremos que tu única preocupación esta Navidad sea disfrutar con quienes más amas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 13: BOTÓN CTA FINAL #3 Y FOOTER -->
+    <section class="bg-elfRed pb-16 px-6 text-center">
+        <div class="max-w-xl mx-auto">
+            <a href="https://wa.link/v21uiu/" target="_blank" rel="noopener" 
+               class="cta-btn-pulse inline-flex items-center justify-center gap-3 bg-elfGold hover:bg-elfGoldHover text-elfGreen font-bold text-lg md:text-xl py-5 px-8 rounded-full shadow-2xl transition duration-300 transform hover:-translate-y-1 w-full sm:w-auto uppercase tracking-wide">
+               <i class="fa-brands fa-whatsapp text-2xl text-elfGreen"></i>
+               ¡QUIERO MI MUÑECO PERSONALIZADO AHORA!
+            </a>
+            <p class="text-xs text-white/70 mt-6">
+                © 2026 Aprendiz de Elfo — Todos los derechos reservados.<br>Mosquera, Cundinamarca, Colombia.
+            </p>
+        </div>
+    </section>
+
+    <!-- LÓGICA INTERACTIVA DEL ACORDEÓN -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+
+                    // Cerrar todos los demás
+                    accordionItems.forEach(i => i.classList.remove('active'));
+
+                    // Si no estaba abierto, abrirlo
+                    if (!isOpen) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Abrir el primer elemento por defecto
+            if (accordionItems.length > 0) {
+                accordionItems[0].classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
